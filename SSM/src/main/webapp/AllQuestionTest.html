@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn01").click(function () {
+                $.ajax({
+                    url:"http://localhost:8080/question/getAllQuestion",
+                    contentType:"application/json;charset=UTF-8",
+                    dataTyp:"JSONP",
+                    method:"post",
+                    success:function (data) {
+                        console.log(data);
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn01">获取大量数据</button>
+
+</body>
+</html>
